@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="stylesheet" href="wiki.css">
+  <script src="scriptswiki.js"></script>
+
+  <link rel="icon" type="image/svg+xml" href="svg.svg">
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StorageCube — Cosmosite</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-left">
+      <button id="menuToggle" class="hamburger" aria-label="Abrir menu">☰</button>
+      <img src="" alt="Cosmosite" height="80" width="80" ><h1 class="brand">Xenocosmo</h1>
+    </div>
+    <div class="nav-right">
+      <input id="searchInput" class="search" type="search" placeholder="Buscar páginas, guias..." />
+      <button class="btn btn-ghost">Login</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-section">
+        <h3>Índice</h3>
+        <nav id="pagesList" class="pages-list">
+          <!-- itens gerados no HTML estático / dinamicamente -->
+          <a href="#" class="page-link" data-title="Visão Geral">Visão Geral</a>
+          <a href="#" class="page-link" data-title="Instalação">Instalação</a>
+          <a href="#" class="page-link" data-title="Guia de Uso">Guia de Uso</a>
+          <a href="#" class="page-link" data-title="Changelog">Changelog</a>
+          <a href="#" class="page-link" data-title="FAQ">FAQ</a>
+          <a href="#" class="page-link" data-title="Recursos">Recursos</a>
+        </nav>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Destaques</h3>
+        <div class="card-small">
+          <h4>Versão 2.3 — Lançamento</h4>
+          <p class="muted">Novos efeitos, otimizações e correções.</p>
+          <span class="badge">Atual</span>
+        </div>
+      </div>
+
+      <div class="sidebar-section footer-note">
+        <p class="muted small">Contribua com a wiki — clique em "Editar" na página desejada.</p>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      <div class="breadcrumbs">Home / <span id="currentPageTitle">Visão Geral</span></div>
+
+      <article id="article" class="article" data-page="Visão Geral">
+        <header class="article-header">
+          <h2 class="article-title">Visão Geral</h2>
+          <div class="article-actions">
+            <button id="btnEdit" class="btn">Editar</button>
+            <button id="btnShare" class="btn btn-ghost">Copiar link</button>
+          </div>
+        </header>
+
+        <div id="toc" class="toc"></div>
+
+        <section class="article-body">
+          <p class="lead">
+            Bem-vindo à página principal do <strong>Nome do Mod</strong>. Esta wiki reúne guias, instalação, changelog e
+            recursos para você tirar o máximo proveito do mod.
+          </p>
+
+          <h3 id="overview-what">O que é este mod?</h3>
+          <p>
+            O <em>Nome do Mod</em> adiciona novas mecânicas, efeitos visuais e conteúdo jogável. Seu foco é melhorar a
+            imersão sem quebrar a compatibilidade com outros mods populares.
+          </p>
+
+          <h3 id="overview-features">Principais funcionalidades</h3>
+          <ul>
+            <li>Efeitos visuais avançados (shaders e partículas)</li>
+            <li>Sistema de progressão ajustável</li>
+            <li>Compatibilidade com <code>ModLoaderX</code></li>
+            <li>Opções configuráveis via menu</li>
+          </ul>
+
+          <h3 id="overview-install">Instalação rápida</h3>
+          <ol>
+            <li>Baixe o mod na página oficial.</li>
+            <li>Extraia para a pasta <code>/mods</code>.</li>
+            <li>Reinicie o jogo e configure em Opções → Mods.</li>
+          </ol>
+
+          <h3 id="overview-screens">Screenshots</h3>
+          <div class="gallery">
+            <img src="https://via.placeholder.com/420x200?text=Screenshot+1" alt="screenshot 1" />
+            <img src="https://via.placeholder.com/420x200?text=Screenshot+2" alt="screenshot 2" />
+          </div>
+
+          <h3 id="overview-changelog">Changelog resumido</h3>
+          <div class="changelog">
+            <div class="ch-log-item">
+              <strong>v2.3</strong> — Correções de estabilidade e melhorias no sistema de partículas.
+            </div>
+            <div class="ch-log-item muted">
+              <strong>v2.2</strong> — Adicionado suporte a controladores, ajustes de balanceamento.
+            </div>
+          </div>
+
+          <h3 id="overview-contrib">Como contribuir</h3>
+          <p>
+            Abra issues no repositório, envie PRs para a documentação ou traduza páginas da wiki.
+          </p>
+        </section>
+      </article>
+
+      <!-- Lista resumida de páginas / cards -->
+      <section class="cards-grid">
+        <h3>Páginas rápidas</h3>
+        <div class="grid">
+          <div class="card">
+            <h4>Instalação</h4>
+            <p class="muted">Passo a passo para instalar e configurar.</p>
+            <button class="nav-card btn-ghost" data-target="Instalação">Abrir</button>
+          </div>
+
+          <div class="card">
+            <h4>Guia de Uso</h4>
+            <p class="muted">Como usar as features principais.</p>
+            <button class="nav-card btn-ghost" data-target="Guia de Uso">Abrir</button>
+          </div>
+
+          <div class="card">
+            <h4>Changelog</h4>
+            <p class="muted">Histórico de versões e fixes.</p>
+            <button class="nav-card btn-ghost" data-target="Changelog">Abrir</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 ModVerse — Wiki não oficial</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
